@@ -17,7 +17,7 @@ const page = ({ params }) => {
 
   useEffect(() => {
     getPhone();
-  }, []);
+  }, [getPhone]);
 
   if (!PhoneData) {
     return <div className="w-4/5 mx-auto my-4 py-8">Loading...</div>;
