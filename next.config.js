@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["fdn2.gsmarena.com", "fdn.gsmarena.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
