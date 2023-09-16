@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { PhoneSpecsFetch } from "@/utils";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const phone = params.product;
 
   const [PhoneData, setPhoneData] = useState(null);
@@ -67,4 +67,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

@@ -25,6 +25,7 @@ const Hero = () => {
     };
   };
 
+  // Include `image` as a dependency in the useEffect dependency array
   useEffect(autoChangeImage, [image]);
 
   return (
