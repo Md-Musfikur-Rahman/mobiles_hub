@@ -7,7 +7,7 @@ const Latest = () => {
   const [phoneData, setPhoneData] = useState(null);
 
   const getLatest = async () => {
-    const response = await fetch(`http://phone-specs-api.vercel.app/latest`);
+    const response = await fetch(`https://phone-specs-api.vercel.app/latest`);
     const result = await response.json();
     setPhoneData(result.data);
   };

@@ -8,7 +8,7 @@ const TopInternet = () => {
 
   const getTopInternet = async () => {
     const response = await fetch(
-      `http://phone-specs-api.vercel.app/top-by-interest`
+      `https://phone-specs-api.vercel.app/top-by-interest`
     );
     const result = await response.json();
     setPhoneData(result.data);

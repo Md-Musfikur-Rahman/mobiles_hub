@@ -8,7 +8,7 @@ const TopFan = () => {
 
   const getTopFan = async () => {
     const response = await fetch(
-      `http://phone-specs-api.vercel.app/top-by-fans`
+      `https://phone-specs-api.vercel.app/top-by-fans`
     );
     const result = await response.json();
     setPhoneData(result.data);
