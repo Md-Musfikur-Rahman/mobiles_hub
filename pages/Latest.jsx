@@ -14,7 +14,7 @@ const Latest = () => {
 
   useEffect(() => {
     getLatest();
-  }, []);
+  }, [getLatest]);
 
   if (!phoneData) {
     return <div className="w-4/5 mx-auto my-4 py-8">Loading...</div>;
