@@ -1,14 +1,14 @@
 "use client";
 
 import { MobileCard } from "@/components";
+import { LatestPhone } from "@/utils";
 import React, { useState, useEffect } from "react";
 
 const Latest = () => {
   const [phoneData, setPhoneData] = useState(null);
 
   const getLatest = async () => {
-    const response = await fetch(`https://phone-specs-api.vercel.app/latest`);
-    const result = await response.json();
+    const result = await LatestPhone();
     setPhoneData(result.data);
   };
 
@@ -22,7 +22,9 @@ const Latest = () => {
 
   return (
     <div className="w-4/5 mx-auto my-10">
-      <h2 className="text-3xl font-bold my-4 text-center">{phoneData.title}</h2>
+      <h2 className="text-3xl font-bold my-6 text-center">
+        Exploring the Latest Devices on the Market
+      </h2>
 
       <div className="grid lg:grid-cols-6 sm:grid-cols-3 gap-5">
         {phoneData.phones.map((phone, i) => (

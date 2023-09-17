@@ -1,24 +1,59 @@
+"use client";
+
 import { MobileCard } from "@/components";
-import { AppleData } from "@/public/apple";
 import { MobileBrandData } from "@/public/constants";
-import React from "react";
+import { PhonesListFetch } from "@/utils";
+import React, { useEffect, useState } from "react";
+import Select from "react-select";
 
 const SearchOption = () => {
+  const [selectedBrand, setSelectedBrand] = useState("apple-phones-48");
+  const [showPhone, setShowPhone] = useState([]);
+
+  const handleBrandChange = (option) => {
+    setSelectedBrand(option.value);
+  };
+
+  const getBrandPhone = async () => {
+    if (selectedBrand) {
+      try {
+        const response = await PhonesListFetch(selectedBrand);
+        const result = response.data.phones;
+        setShowPhone(result);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  const getPhone = async () => {};
+
+  useEffect(() => {
+    getBrandPhone();
+  }, [selectedBrand]);
+
   return (
     <div className="w-4/5 mx-auto my-11">
-      <h2 className="text-xl font-bold">Filters</h2>
-      <div className="flex justify-between my-4">
-        <select name="brand" id="brand">
-          {MobileBrandData.map((brand) => (
-            <option key={brand.brand_id} value={brand.brand_slug}>
-              {brand.brand_name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <h2 className="text-3xl font-bold my-6 text-center">
+        Seeking Something Different?
+      </h2>
 
-      <div className="grid grid-cols-4 gap-5">
-        {AppleData.map((apple, i) => (
+      <form className="w-full my-6">
+        <Select
+          name="brand"
+          placeholder="Search by Brand names"
+          options={MobileBrandData.map((brand) => ({
+            value: brand.brand_slug,
+            label: brand.brand_name,
+          }))}
+          value={selectedBrand}
+          onChange={handleBrandChange}
+          className="text-xl"
+        />
+      </form>
+
+      <div className="grid sm:grid-cols-4 lg:grid-cols-6 gap-5">
+        {showPhone.map((apple, i) => (
           <div key={i}>
             <MobileCard {...apple} />
           </div>
@@ -29,3 +64,19 @@ const SearchOption = () => {
 };
 
 export default SearchOption;
+
+{
+  /* <select
+          name="brand"
+          id="brand"
+          onChange={handleBrandChange}
+          className=" bg-blue-100 px-4 py-2"
+        >
+          <option value="">Select a brand</option>
+          {MobileBrandData.map((brand) => (
+            <option key={brand.brand_id} value={brand.brand_slug}>
+              {brand.brand_name}
+            </option>
+          ))}
+        </select> */
+}

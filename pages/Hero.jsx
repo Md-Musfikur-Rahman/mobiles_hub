@@ -18,14 +18,13 @@ const Hero = () => {
   const autoChangeImage = () => {
     const timer = setTimeout(() => {
       nextslide();
-    }, 10500); // 10 seconds in milliseconds
+    }, 10500);
 
     return () => {
-      clearTimeout(timer); // Clear the timer if the component unmounts
+      clearTimeout(timer);
     };
   };
 
-  // Include `image` as a dependency in the useEffect dependency array
   useEffect(autoChangeImage, [image]);
 
   return (
