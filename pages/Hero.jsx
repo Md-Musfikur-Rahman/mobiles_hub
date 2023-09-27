@@ -38,7 +38,7 @@ const Hero = () => {
           className="w-full h-full object-cover z-0"
         />
         <div className="text-[#dad5f6] text-4xl font-bold absolute translate-y-1/2 text-center bg-slate-50 bg-opacity-40 py-5 px-9 rounded-full">
-          Don't miss out on the mobile revolution. <br />
+          Do not miss out on the mobile revolution. <br />
           <span className="text-6xl">Start exploring now!</span>
         </div>
 
