@@ -15,17 +15,19 @@ const Hero = () => {
     setImage((image + 1) % heroSliderImages.length);
   };
 
-  const autoChangeImage = () => {
-    const timer = setTimeout(() => {
-      nextslide();
-    }, 10500);
+  useEffect(() => {
+    const autoChangeImage = () => {
+      const timer = setTimeout(() => {
+        nextslide();
+      }, 10500);
 
-    return () => {
-      clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+      };
     };
-  };
 
-  useEffect(autoChangeImage, [image]);
+    autoChangeImage();
+  });
 
   return (
     <>

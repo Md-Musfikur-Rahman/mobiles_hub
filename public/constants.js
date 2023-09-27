@@ -7,15 +7,15 @@ import HeroImg5 from "@/public/assets/hero5.jpg";
 export const menuItemList = [
   {
     itemName: "About",
-    itemURL: "",
+    itemURL: "/about",
   },
   {
     itemName: "Blogs",
-    itemURL: "",
+    itemURL: "/blogs",
   },
   {
-    itemName: "Others",
-    itemURL: "",
+    itemName: "Contact",
+    itemURL: "/contact",
   },
 ];
 
@@ -890,5 +890,28 @@ export const MobileBrandData = [
     brand_slug: "zte-phones-62",
     device_count: 359,
     detail: "http://phone-specs-api.vercel.app/brands/zte-phones-62",
+  },
+];
+
+export const FooterLinks = [
+  {
+    name: "Facebook",
+    logo: "",
+    linkURL: "",
+  },
+  {
+    name: "Instagram",
+    logo: "",
+    linkURL: "",
+  },
+  {
+    name: "Twitter",
+    logo: "",
+    linkURL: "",
+  },
+  {
+    name: "Github",
+    logo: "",
+    linkURL: "",
   },
 ];

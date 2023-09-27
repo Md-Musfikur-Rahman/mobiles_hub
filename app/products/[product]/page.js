@@ -10,14 +10,14 @@ const Page = ({ params }) => {
 
   const [PhoneData, setPhoneData] = useState(null);
 
-  const getPhone = async () => {
-    const result = await PhoneSpecsFetch(phone);
-    setPhoneData(result.data);
-  };
-
   useEffect(() => {
+    const getPhone = async () => {
+      const result = await PhoneSpecsFetch(phone);
+      setPhoneData(result.data);
+    };
+
     getPhone();
-  }, [getPhone]);
+  }, [phone]);
 
   if (!PhoneData) {
     return <div className="w-4/5 mx-auto my-4 py-8">Loading...</div>;

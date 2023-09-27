@@ -5,7 +5,7 @@ import React from "react";
 const MobileCard = ({ phone_name, slug, image }) => {
   return (
     <div className="border px-4 py-1 rounded-xl bg-gray-50 hover:bg-gray-200 hover:scale-110 shadow-lg hover:shadow-2xl duration-500 flex flex-col justify-center items-center">
-      <Link href={`/${slug}`}>
+      <Link href={`/products/${slug}`}>
         <Image
           src={image}
           alt={slug}

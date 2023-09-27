@@ -14,23 +14,23 @@ const SearchOption = () => {
     setSelectedBrand(option.value);
   };
 
-  const getBrandPhone = async () => {
-    if (selectedBrand) {
-      try {
-        const response = await PhonesListFetch(selectedBrand);
-        const result = response.data.phones;
-        setShowPhone(result);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  };
-
-  const getPhone = async () => {};
+  // const getPhone = async () => {};
 
   useEffect(() => {
+    const getBrandPhone = async () => {
+      if (selectedBrand) {
+        try {
+          const response = await PhonesListFetch(selectedBrand);
+          const result = response.data.phones;
+          setShowPhone(result);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
+
     getBrandPhone();
-  }, [selectedBrand]);
+  });
 
   return (
     <div className="w-4/5 mx-auto my-11">
