@@ -10,7 +10,7 @@ const Footer = () => {
       <div>
         <Link href="/" className="flex items-center">
           <Image src={Logo} alt="Logo" width={50} height={50} />
-          <h1 className="text-4xl font-bold text-blue-600">Mobile Insight</h1>
+          <h1 className="text-4xl font-bold text-[#541872]">Mobile Insight</h1>
         </Link>
       </div>
 

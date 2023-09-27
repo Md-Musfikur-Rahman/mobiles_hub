@@ -37,8 +37,9 @@ const Hero = () => {
           alt="Hero image"
           className="w-full h-full object-cover z-0"
         />
-        <div className="text-blue-900 text-4xl font-bold absolute translate-y-1/2">
-          Your Content Goes Here
+        <div className="text-[#dad5f6] text-4xl font-bold absolute translate-y-1/2 text-center bg-slate-50 bg-opacity-40 py-5 px-9 rounded-full">
+          Don't miss out on the mobile revolution. <br />
+          <span className="text-6xl">Start exploring now!</span>
         </div>
 
         <div className=" group-hover:flex hidden justify-between absolute w-full translate-y-1/2 duration-500">
