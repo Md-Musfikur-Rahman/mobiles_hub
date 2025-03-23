@@ -1,5 +1,4 @@
-import Navbar from "./Navbar";
-import MobileCard from "./MobileCard";
-import TopCard from "./TopCard";
-
-export { Navbar, MobileCard, TopCard };
+export { default as MobileCard } from "./MobileCard";
+export { default as Navbar } from "./Navbar";
+export { default as TopCard } from "./TopCard";
+export { default as LoadingSpinner } from "./LoadingSpinner";

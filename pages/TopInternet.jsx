@@ -1,6 +1,6 @@
 "use client";
 
-import { TopCard } from "@/components";
+import { LoadingSpinner, TopCard } from "@/components";
 import { TopByInternetPhone } from "@/utils";
 import React, { useState, useEffect } from "react";
 
@@ -17,12 +17,12 @@ const TopInternet = () => {
   }, []);
 
   if (!phoneData) {
-    return <div className="w-4/5 mx-auto my-4 py-8">Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   return (
     <div className="w-4/5 mx-auto my-10">
-      <h2 className="text-3xl font-bold my-6 text-center">
+      <h2 className="text-3xl font-bold my-6 text-center bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text">
         Trending on the Internet
       </h2>
 

@@ -34,7 +34,7 @@ const SearchOption = () => {
 
   return (
     <div className="w-4/5 mx-auto my-11">
-      <h2 className="text-3xl font-bold my-6 text-center">
+      <h2 className="text-3xl font-bold my-6 text-center bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text">
         Seeking Something Different?
       </h2>
 
