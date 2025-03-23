@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const BlogPosts = [
   {
@@ -90,10 +91,13 @@ const AllBlogs = () => {
             className="group backdrop-blur-sm bg-gradient-to-br from-white/60 to-white/30 border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
           >
             <div className="relative h-48 w-full overflow-hidden">
-              <img
+              <Image
                 src={`https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=60`}
                 alt={post.postTitle}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                width={800}
+                height={400}
+                priority
               />
               <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full">
                 <p className="text-sm font-medium text-gray-700">

@@ -10,7 +10,7 @@ const ExtraPage = ({ params }) => {
     return (
       <div className="w-4/5 mx-auto my-10">
         <h1 className="text-3xl font-bold text-center bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text mb-8">
-          Let's Connect
+          Let&apos;s Connect
         </h1>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -20,9 +20,9 @@ const ExtraPage = ({ params }) => {
                 About Me
               </h2>
               <p className="text-gray-600">
-                I'm Musfikur Rahaman, a Full Stack Developer with expertise in
-                MERN stack development. I specialize in creating responsive and
-                user-friendly web applications.
+                I&apos;m Musfikur Rahaman, a Full Stack Developer with expertise
+                in MERN stack development. I specialize in creating responsive
+                and user-friendly web applications.
               </p>
             </div>
 

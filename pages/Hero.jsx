@@ -32,7 +32,7 @@ const Hero = () => {
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [image]);
+  }, [image, nextslide]);
 
   return (
     <div className="mx-auto h-[70vh] my-4 overflow-hidden relative">

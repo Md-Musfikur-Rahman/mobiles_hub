@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogPosts = [
   {
@@ -40,7 +41,7 @@ const SingleBlog = ({ params }) => {
           Blog Not Found
         </h1>
         <p className="text-gray-600 mb-8">
-          The blog post you're looking for doesn't exist.
+          The blog post you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link
           href="/blogs"
@@ -57,10 +58,13 @@ const SingleBlog = ({ params }) => {
       {/* Hero Section */}
       <div className="mb-12">
         <div className="relative h-[60vh] w-full rounded-2xl overflow-hidden mb-8">
-          <img
+          <Image
             src={post.featuredImage}
             alt={post.postTitle}
             className="w-full h-full object-cover"
+            width={800}
+            height={600}
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
             <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -75,10 +79,12 @@ const SingleBlog = ({ params }) => {
                 {post.postTitle}
               </h1>
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={post.authorImage}
                   alt={post.author}
                   className="w-12 h-12 rounded-full border-2 border-white/20"
+                  width={48}
+                  height={48}
                 />
                 <div className="text-white">
                   <p className="font-medium">{post.author}</p>
@@ -130,10 +136,12 @@ const SingleBlog = ({ params }) => {
                 className="group backdrop-blur-sm bg-white/40 border border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative h-48 w-full overflow-hidden">
-                  <img
+                  <Image
                     src={relatedPost.featuredImage}
                     alt={relatedPost.postTitle}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    width={400}
+                    height={300}
                   />
                 </div>
                 <div className="p-6">
